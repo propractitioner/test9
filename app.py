@@ -3,25 +3,25 @@ import random
 
 # 일본 음식 리스트
 japanese_foods = [
-    "스시", "라멘", "돈카츠", "우동", "소바",
+    "すし", "ラーメン", "とんかつ", "うどん", "そば",
     "sushi", "ramen", "tonkatsu", "udon", "soba",
-    "오코노미야키", "규동", "덴푸라", "미소시루", "타코야키",
+    "お好み焼き", "牛丼", "天ぷら", "味噌汁", "たこ焼き",
     "okonomiyaki", "gyudon", "tempura", "miso soup", "takoyaki",
-    "야키토리", "오니기리", "카레라이스", "나베", "규카츠",
+    "焼き鳥", "おにぎり", "カレーライス", "鍋", "牛カツ",
     "yakitori", "onigiri", "curry rice", "nabe", "gyukatsu"
 ]
 
 def get_random_food():
     return random.choice(japanese_foods)
 
-st.title("🍱 무작위 일본 점심 메뉴 추천기")
+st.title("🍱 ランダムな日本のランチメニュー推薦")
 
-st.write("일본 음식이 당기시나요? 버튼을 눌러 랜덤한 일본 메뉴를 추천받아보세요!")
+st.write("日本料理が食べたいですか？ボタンを押してランダムな日本のメニューを推薦してもらいましょう！")
 
-if st.button("일본 점심 메뉴 추천받기"):
+if st.button("日本のランチメニューを推薦する"):
     recommended_food = get_random_food()
-    st.success(f"오늘의 추천 일본 메뉴는 '{recommended_food}' 입니다!")
+    st.success(f"今日のお勧めの日本料理は「{recommended_food}」です！")
     st.balloons()
 
 st.write("---")
-st.write("메뉴가 마음에 들지 않으면 다시 버튼을 눌러보세요.")
+st.write("メニューが気に入らない場合は、もう一度ボタンを押してください。")
